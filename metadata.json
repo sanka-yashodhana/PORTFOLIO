@@ -1,0 +1,6 @@
+{
+  "name": "Sanka -- 3D Creator",
+  "description": "A high-end 3D creator portfolio landing page for Sanka featuring stunning visuals, magnetic interactions, and responsive design.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,57 @@
+import { useState } from "react";
+import HeroSection from "./components/HeroSection";
+import MarqueeSection from "./components/MarqueeSection";
+import AboutSection from "./components/AboutSection";
+import ServicesSection from "./components/ServicesSection";
+import ProjectsSection from "./components/ProjectsSection";
+import ContactDialog from "./components/ContactDialog";
+import EducationSection from "./components/EducationSection";
+import SkillsSection from "./components/SkillsSection";
+
+export default function App() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  
+  const openContact = () => setIsContactOpen(true);
+  const closeContact = () => setIsContactOpen(false);
+
+  return (
+    <div 
+      className="bg-[#0C0C0C] min-h-screen text-[#D7E2EA] font-sans relative"
+    >
+      {/* 1. Hero Section */}
+      <HeroSection onContactClick={openContact} />
+
+      {/* 2. Marquee Section */}
+      <MarqueeSection />
+
+      {/* 3. About Section */}
+      <AboutSection onContactClick={openContact} />
+
+      {/* 4. Services Section */}
+      <ServicesSection />
+
+      <div className="h-20 sm:h-40 md:z-30"/>
+
+      {/* 5. Education Section */}
+      <EducationSection />
+
+      <div className="h-20 sm:h-40 md:z-30"/>
+
+      {/* Skills Section */}
+      <SkillsSection />
+
+      <div className="h-20 sm:h-30 md:h-40"/>
+
+      {/* 6. Projects Section */}
+      <ProjectsSection />
+
+      {/* Contact Dialog Popup */}
+      <ContactDialog isOpen={isContactOpen} onClose={closeContact} />
+
+      {/* Humble Footer */}
+      <footer className="bg-[#0C0C0C] py-8 border-t border-white/5 text-center text-xs tracking-widest text-[#D7E2EA]/40 uppercase select-none">
+        SANKA — 3D CREATOR © {new Date().getFullYear()} • ALL RIGHTS RESERVED
+      </footer>
+    </div>
+  );
+}
