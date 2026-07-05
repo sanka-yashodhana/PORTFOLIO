@@ -44,7 +44,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
           as="h1" 
           delay={0.15} 
           y={40} 
-          className="hero-heading text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw] font-black uppercase tracking-tight leading-none text-center whitespace-nowrap w-full select-none"
+          className="hero-heading font-black uppercase tracking-tight leading-none text-center whitespace-nowrap w-full select-none"
         >
           Hi, i&apos;m sanka
         </FadeIn>

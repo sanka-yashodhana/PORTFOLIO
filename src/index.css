@@ -28,6 +28,7 @@ html, body, #root {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-size: clamp(3rem, 15vw, 15rem); /* Responsive font sizing */
 }
 
 /* Smooth sticky styles if needed */
