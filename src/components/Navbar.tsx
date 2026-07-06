@@ -2,9 +2,10 @@ import FadeIn from "./FadeIn";
 
 interface NavbarProps {
   onContactClick: () => void;
+  onMenuClick: () => void;
 }
 
-export default function Navbar({ onContactClick }: NavbarProps) {
+export default function Navbar({ onContactClick, onMenuClick }: NavbarProps) {
   const handleScroll = (id: string) => {
     const el = document.getElementById(id);
     if (el) {
@@ -23,8 +24,8 @@ export default function Navbar({ onContactClick }: NavbarProps) {
           Software Builder
         </button>
 
-        {/* Links */}
-        <div className="flex items-center gap-4 sm:gap-8 md:gap-12 lg:gap-16">
+        {/* Links - Hidden on small screens */}
+        <div className="hidden md:flex items-center gap-4 sm:gap-8 md:gap-12 lg:gap-16">
           <button
             onClick={() => handleScroll("about")}
             className="text-sm md:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider text-[#D7E2EA] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
@@ -56,6 +57,13 @@ export default function Navbar({ onContactClick }: NavbarProps) {
             className="text-sm md:text-lg lg:text-[1.4rem] font-medium uppercase tracking-wider text-[#D7E2EA] transition-opacity duration-200 hover:opacity-70 cursor-pointer"
           >
             Contact
+          </button>
+        </div>
+        
+        {/* Hamburger Menu - Visible on small screens */}
+        <div className="md:hidden">
+          <button onClick={onMenuClick} className="text-white">
+            Menu
           </button>
         </div>
       </div>

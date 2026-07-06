@@ -7,6 +7,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ContactDialog from "./components/ContactDialog";
 import EducationSection from "./components/EducationSection";
 import SkillsSection from "./components/SkillsSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -48,10 +49,11 @@ export default function App() {
       {/* Contact Dialog Popup */}
       <ContactDialog isOpen={isContactOpen} onClose={closeContact} />
 
-      {/* Humble Footer */}
-      <footer className="bg-[#0C0C0C] py-8 border-t border-white/5 text-center text-xs tracking-widest text-[#D7E2EA]/40 uppercase select-none">
-        SANKA — 3D CREATOR © {new Date().getFullYear()} • ALL RIGHTS RESERVED
-      </footer>
+      
+      <div className="h-20 sm:h-40 md:z-30"/>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

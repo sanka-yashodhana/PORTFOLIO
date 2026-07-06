@@ -76,11 +76,12 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
   return (
     <div
       ref={containerRef}
-      className="sticky w-full min-h-[85vh] sm:min-h-[90vh] md:min-h-[95vh] flex justify-center items-start overflow-visible pt-4"
+      className="sticky w-full flex justify-center items-center overflow-visible py-[10vh]"
       style={{
-        // top is offset by index * 28px plus base top sticky spacing (e.g., top-24 is 96px, top-32 is 128px)
-        top: `${index * 28 + 96}px`,
-        paddingBottom: `${(total - 1 - index) * 20}px`,
+        // Stick below the top of the viewport to create a gap. 10vh is 10% of the viewport height.
+        top: "10vh",
+        // Add padding to create space for the stacking effect
+        paddingBottom: `${(total - 1 - index) * 28}px`,
       }}
     >
       <motion.div
@@ -88,7 +89,7 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
           scale,
           opacity,
         }}
-        className="w-full border-2 border-[#D7E2EA] bg-[#0C0C0C] rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-5 sm:p-6 md:p-8 flex flex-col justify-between gap-6 md:gap-8 shadow-2xl border-opacity-70"
+        className="w-full max-w-5xl xl:max-w-6xl border-2 border-[#D7E2EA]/70 bg-[#0C0C0C] rounded-[40px] sm:rounded-[50px] md:rounded-[60px] p-5 sm:p-6 md:p-8 flex flex-col justify-between gap-4 md:gap-6 shadow-2xl"
       >
         {/* Top Row: Number, category, name, and Live Project Button */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 w-full">
@@ -157,23 +158,23 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-4 sm:gap-6 w-full flex-1 min-h-0">
           {/* Column 1 (40% width) - 2 stacked images */}
           <div className="flex flex-col gap-4 sm:gap-6 h-full justify-between">
-            {/* Col 1 image 1 */}
+            {/* Col 1 image 1 - More flexible height */}
             <div
-              style={{ height: "clamp(130px, 16vw, 230px)" }}
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-neutral-900 border border-white/5 shadow-inner"
+              style={{ height: "clamp(100px, 15vw, 180px)" }}
+              className="w-full rounded-[20px] sm:rounded-[30px] md:rounded-[40px] overflow-hidden bg-neutral-900 border border-white/5 shadow-inner"
             >
               <img
                 src={project.col1_1}
                 alt={`${project.name} visual 1`}
-                className="w-full h-full object-cover select-none pointer-events-none"
+                className="w-full h-full object-cover object-center select-none pointer-events-none"
                 referrerPolicy="no-referrer"
               />
             </div>
 
-            {/* Col 1 image 2 */}
+            {/* Col 1 image 2 - More flexible height */}
             <div
-              style={{ height: "clamp(160px, 22vw, 340px)" }}
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-neutral-900 border border-white/5 shadow-inner flex-grow"
+              style={{ height: "clamp(120px, 25vw, 280px)" }}
+              className="w-full rounded-[20px] sm:rounded-[30px] md:rounded-[40px] overflow-hidden bg-neutral-900 border border-white/5 shadow-inner flex-grow"
             >
               <img
                 src={project.col1_2}
@@ -185,11 +186,11 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
           </div>
 
           {/* Column 2 (60% width) - 1 tall showcase image */}
-          <div className="w-full h-full min-h-[220px] md:min-h-0 rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-neutral-900 border border-white/5 shadow-inner">
+          <div className="w-full h-full min-h-[180px] md:min-h-0 rounded-[20px] sm:rounded-[30px] md:rounded-[40px] overflow-hidden bg-neutral-900 border border-white/5 shadow-inner">
             <img
               src={project.col2}
               alt={`${project.name} showcase`}
-              className="w-full h-full object-cover select-none pointer-events-none"
+              className="w-full h-full object-cover object-center select-none pointer-events-none"
               referrerPolicy="no-referrer"
             />
           </div>

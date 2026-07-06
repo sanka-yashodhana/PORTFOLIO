@@ -50,7 +50,7 @@ export default function MarqueeSection() {
             {row1Tripled.map((url, idx) => (
               <div
                 key={`row1-${idx}`}
-                className="w-[280px] h-[180px] sm:w-[360px] sm:h-[230px] md:w-[420px] md:h-[270px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-900/50 border border-white/5"
+                className="w-[200px] h-[100px] sm:w-[360px] sm:h-[230px] md:w-[420px] md:h-[270px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-900/50 border border-white/5"
               >
                 <img
                   src={url}
@@ -76,7 +76,7 @@ export default function MarqueeSection() {
             {row2Tripled.map((url, idx) => (
               <div
                 key={`row2-${idx}`}
-                className="w-[280px] h-[180px] sm:w-[360px] sm:h-[230px] md:w-[420px] md:h-[270px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-900/50 border border-white/5"
+                className="w-[200px] h-[100px] sm:w-[360px] sm:h-[230px] md:w-[420px] md:h-[270px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg bg-neutral-900/50 border border-white/5"
               >
                 <img
                   src={url}
