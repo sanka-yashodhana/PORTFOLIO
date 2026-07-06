@@ -13,8 +13,9 @@ export const MARQUEE_GIFS: string[] = [
   "https://i.postimg.cc/tTdB6dXR/Screen-Recording2026-07-05230905-ezgif-com-video-to-gif-converter.gif",
   "https://motionsites.ai/assets/hero-xportfolio-preview-D4A8maiC.gif",
   "https://i.postimg.cc/zvS4JZLn/Screen-Recording2026-07-05230732-ezgif-com-video-to-gif-converter.gif",
-  "https://motionsites.ai/assets/hero-nexora-preview-cx5HmUgo.gif",
-  "https://motionsites.ai/assets/hero-evr-ventures-preview-DZxeVFEX.gif",
+  "https://i.postimg.cc/Qx8pvphn/Screen-Recording2026-07-06183345-ezgif-com-video-to-gif-converter.gif",
+  "https://i.postimg.cc/G2z9bd90/Screen-Recording2026-07-05043536-ezgif-com-video-to-gif-converter.gif",
+  "https://i.postimg.cc/VLhd4M6X/Screen-Recording2026-07-06183437-ezgif-com-video-to-gif-converter.gif",
 ];
 
 export const SERVICES: ServiceItem[] = [
