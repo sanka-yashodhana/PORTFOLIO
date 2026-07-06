@@ -9,9 +9,9 @@ export default function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="bg-[#0C0C0C] text-[#D7E2EA] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 px-5 sm:px-8 md:px-10 py-20 relative z-30 overflow-visible"
+      className="bg-[#0C0C0C] text-[#D7E2EA] rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 px-5 sm:px-8 md:px-10 py-20 relative z-30 flex flex-col items-center"
     >
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl w-full">
         {/* Section Heading */}
         <div className="text-center mb-16 sm:mb-20 md:mb-24">
           <FadeIn delay={0} y={40} as="h2">
@@ -19,7 +19,7 @@ export default function ProjectsSection() {
               style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
               className="hero-heading font-black uppercase tracking-tight block select-none"
             >
-              Project
+              Projects
             </span>
           </FadeIn>
         </div>
