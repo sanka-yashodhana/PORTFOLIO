@@ -5,17 +5,19 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="bg-white text-[#0C0C0C] rounded-t-[40px] sm:rounded-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-20 flex flex-col justify-center"
+      className="bg-white text-[#0C0C0C] rounded-t-[40px] sm:rounded-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-20 flex flex-col justify-center items-center"
     >
-      <div className="max-w-5xl">
+      <div className="max-w-5xl w-full">
         {/* Heading */}
         <div className="text-center justify-center mb-16 sm:mb-20 md:mb-28">
-          <span
-            style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
-            className="font-black uppercase tracking-tight text-[#0C0C0C]  block select-none"
-          >
-            Education
-          </span>
+          <FadeIn as="h2" y={40}>
+            <span
+              style={{ fontSize: "clamp(3rem, 12vw, 160px)" }}
+              className="font-black uppercase tracking-tight text-[#0C0C0C]  block select-none"
+            >
+              Education
+            </span>
+          </FadeIn>
         </div>
 
         {/* Education items */}
