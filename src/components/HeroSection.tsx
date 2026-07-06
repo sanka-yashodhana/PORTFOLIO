@@ -27,20 +27,20 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} onContactClick={onContactClick} />
 
       {/* Middle Content: Heading + Portrait */}
-      <div className="flex-1 flex flex-col items-center justify-center relative z-0 overflow-hidden mt-6 sm:mt-4 md:-mt-5">
+      <div className="flex-1 flex flex-col items-center justify-center relative z-0 overflow-hidden">
         {/* Hero Heading */}
         <FadeIn 
           as="h1" 
           delay={0.15} 
           y={40} 
-          className="hero-heading font-black uppercase tracking-tight leading-none text-center whitespace-nowrap w-full select-none z-10"
+          className="hero-heading font-black uppercase tracking-tight leading-none text-center whitespace-nowrap w-full select-none z-10 mt-6 sm:mt-4 md:-mt-5"
         >
           Hi, i&apos;m sanka
         </FadeIn>
 
         {/* Hero Portrait - In flow on mobile, absolute on larger screens */}
         <div 
-          className="relative z-0 w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px] pointer-events-none mt-4 sm:mt-6"
+          className="relative md:absolute md:top-8/12 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2 z-0 w-[220px] sm:w-[280px] md:w-[340px] lg:w-[400px] pointer-events-none mt-4 sm:mt-6 md:mt-0"
         >
           <FadeIn delay={0.6} y={30} className="w-full pointer-events-auto">
             <Magnet
