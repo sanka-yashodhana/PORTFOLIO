@@ -25,7 +25,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Sticky Cards Stacking Area */}
-        <div className="relative flex flex-col gap-10 sm:gap-14 md:gap-16 pb-20 overflow-visible">
+        <div className="relative flex flex-col gap-10 sm:gap-14 md:gap-16 pb-20 sm:pb-24 md:pb-32 overflow-visible">
           {PROJECTS.map((project, index) => (
             <ProjectCard
               key={project.id}
@@ -80,7 +80,7 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
       style={{
         // Stick below the top of the viewport to create a gap.
         top: "12vh",
-        // Add padding to create space for the stacking effect.
+        // Add padding to create space for the stacking effect. This is 0 for the last card.
         paddingBottom: `${(total - 1 - index) * 28}px`,
       }}
     >

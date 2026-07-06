@@ -18,7 +18,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full flex flex-col justify-between overflow-hidden bg-[#0C0C0C] px-6 md:px-10 pb-7 sm:pb-8 md:pb-10"
+      className="relative min-h-screen w-full flex flex-col justify-between overflow-hidden bg-[#0C0C0C] px-6 md:px-10 pb-7 sm:pb-8 md:pb-10"
     >
       {/* Navbar at top */}
       <Navbar onContactClick={onContactClick} onMenuClick={openSidebar} />
