@@ -152,7 +152,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="Sanka"
+                      placeholder="Your Name"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#B600A8]/80 transition-colors"
                     />
                   </div>
@@ -167,7 +167,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="sanka@example.com"
+                      placeholder="your.email@example.com"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#B600A8]/80 transition-colors"
                     />
                   </div>
@@ -183,7 +183,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="We need a full-stack MERN application with..."
+                    placeholder="What's on your mind? How can I help you?"
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#B600A8]/80 transition-colors resize-none"
                   />
                 </div>
