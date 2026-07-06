@@ -27,13 +27,13 @@ const socialLinks = [
   {
     label: "LinkedIn",
     icon: Linkedin,
-    href: "https://www.linkedin.com/in/sanka-yashodhana-a2732b288/",
+    href: "https://www.linkedin.com/in/sanka-yashodana/",
   },
-  { label: "GitHub", icon: Github, href: "https://github.com/sankayashodhana" },
+  { label: "GitHub", icon: Github, href: "https://github.com/sanka-yashodhana" },
   {
     label: "Facebook",
     icon: Facebook,
-    href: "https://www.facebook.com/sanka.yashodhana.7",
+    href: "https://www.facebook.com/sanka.yasodana.3?mibextid=ZbWKwL",
   },
   {
     label: "Instagram",
@@ -43,10 +43,10 @@ const socialLinks = [
   {
     label: "WhatsApp",
     icon: MessageSquare,
-    href: "https://wa.me/+94788776363",
+    href: "https://wa.me/+94729902577",
   },
-  { label: "Email", icon: Mail, href: "mailto:sankayashodhana@gmail.com" },
-  { label: "Phone", icon: Phone, href: "tel:+94788776363" },
+  { label: "Email", icon: Mail, href: "mailto:sankayashodana13@gmail.com" },
+  { label: "Phone", icon: Phone, href: "tel:+94729902577" },
 ];
 
 export default function Footer() {

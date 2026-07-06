@@ -76,17 +76,17 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
     {
       label: "LinkedIn",
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/sanka-yashodhana-a2732b288/",
+      href: "https://www.linkedin.com/in/sanka-yashodana/",
     },
     {
       label: "GitHub",
       icon: Github,
-      href: "https://github.com/sankayashodhana",
+      href: "https://github.com/sanka-yashodhana",
     },
     {
       label: "Facebook",
       icon: Facebook,
-      href: "https://www.facebook.com/sanka.yashodhana.7",
+      href: "https://www.facebook.com/sanka.yasodana.3?mibextid=ZbWKwL",
     },
     {
       label: "Instagram",
@@ -96,7 +96,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
     {
       label: "WhatsApp",
       icon: MessageSquare,
-      href: "https://wa.me/+94788776363",
+      href: "https://wa.me/+94729902577",
     },
   ];
 
