@@ -17,6 +17,7 @@ export interface ServiceItem {
   number: string;
   name: string;
   description: string;
+  tags: string[];
 }
 
 export interface EducationItem {

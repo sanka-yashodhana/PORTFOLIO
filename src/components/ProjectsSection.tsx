@@ -76,11 +76,11 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
   return (
     <div
       ref={containerRef}
-      className="sticky w-full flex justify-center items-center overflow-visible py-[10vh]"
+      className="sticky w-full flex justify-center items-start overflow-visible"
       style={{
-        // Stick below the top of the viewport to create a gap. 10vh is 10% of the viewport height.
-        top: "10vh",
-        // Add padding to create space for the stacking effect
+        // Stick below the top of the viewport to create a gap.
+        top: "12vh",
+        // Add padding to create space for the stacking effect.
         paddingBottom: `${(total - 1 - index) * 28}px`,
       }}
     >

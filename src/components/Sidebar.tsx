@@ -9,8 +9,9 @@ interface SidebarProps {
 
 const navLinks = [
   { id: "about", label: "About" },
+    { id: "services", label: "services" },
   { id: "education", label: "Education" },
-  { id: "services", label: "Price" },
+
   { id: "projects", label: "Projects" },
 ];
 

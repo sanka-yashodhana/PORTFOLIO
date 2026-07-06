@@ -21,37 +21,42 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "s1",
     number: "01",
-    name: "3D Modeling",
+    name: "Full-Stack Architecture",
     description:
-      "Creation of detailed objects, characters, or environments tailored to specific client needs, ideal for games, products, and visualizations.",
+      ".Shipping robust, end-to-end applications with a strong product sense, efficient data flow, and secure execution.",
+    tags: ["MERN Stack", "RESTful APIs", "Authentication"],
   },
   {
     id: "s2",
     number: "02",
-    name: "Rendering",
+    name: "High-Performance Frontend",
     description:
-      "High-quality, photorealistic renders that showcase designs with custom lighting, textures, and materials to bring concepts to life.",
+      "Crafting modern interfaces that feel highly intentional in spacing, micro-interactions, layout hierarchy, and speed.",
+    tags: ["Next.js", "Tailwind CSS", "UI Systems"],
   },
   {
     id: "s3",
     number: "03",
-    name: "Motion Design",
+    name: "Interactive UI Labs",
     description:
-      "Dynamic animations and motion graphics that add energy and storytelling to brands, products, and digital experiences.",
+      "Building custom browser animations, scroll-driven storytelling, and fluid micro-interactions that elevate standard web carousels.",
+    tags: ["Swiper.js", "Motion Design", "UX Mechanics"],
   },
   {
     id: "s4",
     number: "04",
-    name: "Branding",
+    name: "Backend Engineering",
     description:
-      "Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presence.",
+      "Crafting cohesive visual identities -- from logos to full brand systems -- that communicate a clear and memorable presenceDeveloping secure, high-performance server-side architectures, custom RESTful endpoints, and structured application logic..",
+    tags: ["Node.js", "Express.js", "JWT Authentication"],
   },
   {
     id: "s5",
     number: "05",
-    name: "Web Design",
+    name: "Database & Systems Design",
     description:
-      "Designing clean, modern, and conversion-focused websites with attention to layout, typography, and user experience.",
+      "Designing reliable foundations for data persistence, schema relations, and secure third-party payment integrations.",
+    tags: ["MongoDB Atlas", "SQL", "Prisma", "Stripe API"],
   },
 ];
 

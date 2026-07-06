@@ -86,7 +86,7 @@ export default function Footer() {
         </div>
         <br></br>
          <p className="text-sm text-[#D7E2EA]/60 mt-4 text-center">
-              &copy; {new Date().getFullYear()} All Rights Reserved.
+              All Right Reserved | Sanka Yashodhana &copy; {new Date().getFullYear()}
             </p>
       </FadeIn>
     </footer>

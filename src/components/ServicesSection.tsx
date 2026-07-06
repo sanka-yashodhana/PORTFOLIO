@@ -49,6 +49,17 @@ export default function ServicesSection() {
                 >
                   {item.description}
                 </p>
+                <p className="flex flex-wrap gap-3 mt-2">
+                  {item.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="inline-block bg-[#0C0C0C] text-white text-xs font-medium px-4 py-2 rounded-full mr-2 gap-2"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </p>
+                <br></br>
               </div>
             </FadeIn>
           ))}

@@ -1,6 +1,16 @@
 import { useState, FormEvent } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { X, Send, Mail, Phone, MapPin, CheckCircle2 } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import {
+  X,
+  Send,
+  CheckCircle2,
+  Linkedin,
+  Github,
+  Facebook,
+  Instagram,
+  MessageSquare,
+} from "lucide-react";
 
 interface ContactDialogProps {
   isOpen: boolean;
@@ -11,29 +21,46 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [budget, setBudget] = useState("Under $5,000");
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    if (!name || !email || !message) return;
+    if (!name || !email || !message) {
+      alert("Please fill in all fields.");
+      return;
+    }
 
     setIsSubmitting(true);
 
-    // Simulate sending progress
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      // Reset after some time or on success
-    }, 1200);
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    const templateParams = {
+      name: name,
+      email: email,
+      message: message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setIsSubmitted(true);
+      })
+      .catch((err) => {
+        console.error("FAILED...", err);
+        alert("Failed to send message. Please try again later.");
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   const resetForm = () => {
     setName("");
     setEmail("");
     setMessage("");
-    setBudget("Under $5,000");
     setIsSubmitted(false);
   };
 
@@ -44,6 +71,34 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
       resetForm();
     }, 300);
   };
+
+  const socialLinks = [
+    {
+      label: "LinkedIn",
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/sanka-yashodhana-a2732b288/",
+    },
+    {
+      label: "GitHub",
+      icon: Github,
+      href: "https://github.com/sankayashodhana",
+    },
+    {
+      label: "Facebook",
+      icon: Facebook,
+      href: "https://www.facebook.com/sanka.yashodhana.7",
+    },
+    {
+      label: "Instagram",
+      icon: Instagram,
+      href: "https://www.instagram.com/sankayashodhana/",
+    },
+    {
+      label: "WhatsApp",
+      icon: MessageSquare,
+      href: "https://wa.me/+94788776363",
+    },
+  ];
 
   return (
     <AnimatePresence>
@@ -78,11 +133,11 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight hero-heading">
-                    Let&apos;s build something great
+                  <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight text-center">
+                    Get in Touch
                   </h3>
-                  <p className="text-sm text-[#D7E2EA]/60 uppercase tracking-wide mt-1">
-                    Describe your 3D project & get a response in 24 hours.
+                  <p className="text-sm text-center text-[#D7E2EA]/60 uppercase tracking-wide mt-2">
+                    Fill out the form and I&apos;ll get back to you in 24 hours.
                   </p>
                 </div>
 
@@ -97,7 +152,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="Jack"
+                      placeholder="Sanka"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#B600A8]/80 transition-colors"
                     />
                   </div>
@@ -112,32 +167,9 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="jack@example.com"
+                      placeholder="sanka@example.com"
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#B600A8]/80 transition-colors"
                     />
-                  </div>
-                </div>
-
-                {/* Project Budget Selector */}
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-semibold uppercase tracking-wider text-[#D7E2EA]/50">
-                    Estimated Project Budget
-                  </label>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-                    {["Under $5k", "$5k - $10k", "$10k - $25k", "$25k+"].map((tier) => (
-                      <button
-                        key={tier}
-                        type="button"
-                        onClick={() => setBudget(tier)}
-                        className={`py-2 px-3 text-xs rounded-xl border font-medium cursor-pointer transition-all duration-150 ${
-                          budget === tier
-                            ? "bg-[#B600A8] text-white border-[#B600A8]"
-                            : "bg-white/5 text-[#D7E2EA]/70 border-white/10 hover:bg-white/10"
-                        }`}
-                      >
-                        {tier}
-                      </button>
-                    ))}
                   </div>
                 </div>
 
@@ -151,7 +183,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                     rows={4}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="We need a premium 3D product render and an interactive website..."
+                    placeholder="We need a full-stack MERN application with..."
                     className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[#B600A8]/80 transition-colors resize-none"
                   />
                 </div>
@@ -185,7 +217,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                 <div className="w-16 h-16 rounded-full bg-[#B600A8]/10 border-2 border-[#B600A8] flex items-center justify-center text-[#B600A8] mb-2 animate-bounce">
                   <CheckCircle2 size={32} />
                 </div>
-                <h3 className="text-2xl sm:text-3xl font-black uppercase tracking-tight hero-heading">
+                <h3 className="text-2xl sm:text-5xl font-black uppercase tracking-tight ">
                   Message Sent!
                 </h3>
                 <p className="text-sm text-[#D7E2EA]/70 max-w-sm">
@@ -199,22 +231,23 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
                 </button>
               </motion.div>
             )}
+            <br></br>
 
             {/* Quick contact direct links */}
             {!isSubmitted && (
-              <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-[#D7E2EA]/60 uppercase tracking-wider">
-                <div className="flex items-center gap-2.5">
-                  <Mail size={14} className="text-[#B600A8]" />
-                  <span>jack@3dcreator.com</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <Phone size={14} className="text-[#7621B0]" />
-                  <span>+1 (555) 3D-JACK</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <MapPin size={14} className="text-[#BE4C00]" />
-                  <span>Tokyo, Japan</span>
-                </div>
+              <div className="mt-8 pt-6 border-t border-white/10 flex items-center justify-center gap-4">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="text-[#D7E2EA]/60 hover:text-[#D7E2EA] hover:scale-110 transition-all duration-200"
+                  >
+                    <link.icon size={20} />
+                  </a>
+                ))}
               </div>
             )}
           </motion.div>
