@@ -117,6 +117,19 @@ export const PROJECTS: Project[] = [
     col2: "https://i.postimg.cc/Hx3QH6YK/Screenshot-2026-07-05-231229.png",
     liveUrl: "https://flavour.akaigen.online/",
   },
+  {
+    id: "p5",
+    number: "05",
+    category: "Next.js, TypeScript, Tailwind CSS, MongoDB, Axios",
+    name: "Next.js Contact Management Application",
+    detailedDescription:
+      "A high-performance, type-safe contact management system designed for seamless relationship tracking and fluid data manipulation. Built using Next.js for optimized client-server rendering, the application features an intuitive user interface, dynamic search filtering, and robust CRUD functionality. Developed with a strict focus on data integrity and clean code architecture, the project utilizes TypeScript for end-to-end type safety, Tailwind CSS for sleek responsive design, and an optimized API layout for rapid, low-latency database transactions.",
+    col1_1:
+      "https://i.postimg.cc/SQt5KNRY/Screenshot-2026-07-06-182450.png",
+    col1_2:"https://i.postimg.cc/W35ygs7B/Screenshot-2026-07-06-182437.png",
+    col2: "https://i.postimg.cc/P58kHvMd/Screenshot-2026-07-06-182417.png",
+    liveUrl: "https://contact-management-system-green.vercel.app/",
+  },
 ];
 
 export const EDUCATION: EducationItem[] = [
