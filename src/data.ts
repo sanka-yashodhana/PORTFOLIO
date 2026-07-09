@@ -159,6 +159,29 @@ export const PROJECTS: Project[] = [
   },
 ];
 
+export const PROJECT_PATTERN_CARDS = [
+  {
+    id: "pattern-1",
+    title: "Conceptualization",
+    description: 'Every project I build begins long before the code editor opens. I start by dissecting the underlying problem, mapping out seamless user journeys, and defining the true purpose of the application. By prioritizing the "why" and "how" before choosing the technology, I ensure that the architecture is built to solve actual user pain points rather than just using the latest tech hype.',
+  },
+  {
+    id: "pattern-2",
+    title: "System Presentation",
+    description: "Interface design is where functionality meets aesthetic precision. I craft frontends with a relentless attention to detail, balancing structural hierarchy and whitespace to guide the user’s eye effortlessly through the application. Every pixel is intentional—from fluid responsiveness across diverse devices to tactile micro-interactions that make the digital experience feel alive, polished, and satisfying to use.",
+  },
+  {
+    id: "pattern-3",
+    title: "Foundations",
+    description: "Behind every smooth user experience lies a powerful, well-structured engine. I approach backend development by crafting secure, high-performance foundations—from optimizing relational and non-relational database schemas to writing deterministic service logic. By treating API design and authentication as critical touchpoints for security and speed, I build backends that don't just store data, but actively drive the product's core utility forward.",
+  },
+  {
+    id: "pattern-4",
+    title: "Operations",
+    description: "A project isn't truly finished until it is securely in the hands of users. I take pride in deploying applications with a deep focus on system resilience, managing everything from cloud infrastructure setup to environment configurations. By embedding comprehensive health monitoring and logging into the system, I can preemptively catch bottlenecks, maintain maximum uptime, and ensure the live product operates just as flawlessly as it did in development.",
+  },
+];
+
 export const EDUCATION: EducationItem[] = [
   {
     id: "e1",

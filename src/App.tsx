@@ -4,6 +4,7 @@ import MarqueeSection from "./components/MarqueeSection";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import ProjectsSection from "./components/ProjectsSection";
+import PatternSection from "./components/PatternSection";
 import ContactDialog from "./components/ContactDialog";
 import EducationSection from "./components/EducationSection";
 import SkillsSection from "./components/SkillsSection";
@@ -45,6 +46,11 @@ export default function App() {
 
       {/* 6. Projects Section */}
       <ProjectsSection />
+
+      <div className="h-20 sm:h-40 md:z-30"/>
+
+      {/* 7. Pattern Section */}
+      <PatternSection />
 
       {/* Contact Dialog Popup */}
       <ContactDialog isOpen={isContactOpen} onClose={closeContact} />
