@@ -131,6 +131,32 @@ export const PROJECTS: Project[] = [
     col2: "https://i.postimg.cc/P58kHvMd/Screenshot-2026-07-06-182417.png",
     liveUrl: "https://contact-management-system-green.vercel.app/",
   },
+  {
+    id: "p6",
+    number: "06",
+    category: "React.js, Node.js, Express.js, MongoDB Atlas, Tailwind CSS, JWT",
+    name: "Library Management System",
+    detailedDescription:
+      "A high-performance, role-based library management system designed for automated circulation workflows and secure institutional data tracking. Built using an optimized single-page architecture for fluid client-side rendering, the application features distinct customized user interfaces for Students, Librarians, and Administrators. Developed with a strict focus on security compliance and data integrity, the project utilizes state-driven role guards (RBAC) via JSON Web Tokens (JWT), automated transaction logic including dynamic fine calculation routines, and a decoupled serverless API layout optimized for rapid database transactions and high availability in cloud hosting environments.",
+    col1_1:
+      "https://i.postimg.cc/43s0PJHz/Screenshot-2026-07-10-011944.png",
+    col1_2:"https://i.postimg.cc/cLq2K7xq/Screenshot-2026-07-10-011904.png",
+    col2: "https://i.postimg.cc/HxSFjfxv/Screenshot-2026-07-10-011841.png",
+    liveUrl: "https://library-management-system-3sek.vercel.app/student/dashboard",
+  },
+  {
+    id: "p7",
+    number: "07",
+    category: "Next.js, Node.js, MongoDB, TypeScript, Tailwind CSS,",
+    name: "Fertilizer & Chemical Inventory Management System",
+    detailedDescription:
+      "A high-performance, batch-centric inventory architecture engineered for automated agricultural supply tracking, seasonal demand analytics, and strict storage compliance. Built using a decoupled server-side rendering architecture for microsecond page transitions, the application features a deeply unified interface designed for warehouse managers, distributors, and field operations teams. Developed with an uncompromising focus on institutional data integrity, the project integrates state-driven session guards via Clerk authentication, automated transactional logic executing First-In, First-Out (FIFO) stock allocation routines, ACID-compliant database operations for multi-lot tracking, and a serverless API layout optimized for rapid database scaling and sub-second edge availability in production cloud environments.",
+    col1_1:
+      "https://i.postimg.cc/3xmRpZ21/Screenshot-2026-07-10-012525.png",
+    col1_2:"https://i.postimg.cc/zvvvgZk3/Screenshot-2026-07-10-012500.png",
+    col2: "https://i.postimg.cc/LXHnmZYL/Screenshot-2026-07-10-012354.png",
+    liveUrl: "",
+  },
 ];
 
 export const EDUCATION: EducationItem[] = [
