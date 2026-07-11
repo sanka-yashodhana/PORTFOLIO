@@ -5,7 +5,7 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="bg-white text-[#0C0C0C] rounded-t-[40px] sm:rounded-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-10 flex flex-col justify-center items-center"
+      className="bg-white text-[#0C0C0C] rounded-t-[40px] sm:rounded-[50px] md:rounded-t-[60px] px-4 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-10 flex flex-col justify-center items-center"
     >
       <div className="max-w-5xl w-full">
         {/* Heading */}
@@ -27,7 +27,7 @@ export default function ServicesSection() {
               key={item.id}
               delay={i * 0.1}
               y={35}
-              className="border-b border-[#0C0C0C]/15 py-8 sm:py-10 md:py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-10"
+              className="border-b border-[#0C0C0C]/15 px-2 sm:px-0 py-8 sm:py-10 md:py-12 flex flex-col items-center text-center md:flex-row md:items-center md:text-left md:justify-between gap-6 md:gap-10"
             >
               {/* Left Column: Number & Name */}
               <div className="flex items-center gap-4 sm:gap-6 md:gap-8 flex-1 ">

@@ -5,9 +5,9 @@ export default function EducationSection() {
   return (
     <section
       id="education"
-      className="bg-white text-[#0C0C0C] rounded-t-[40px] sm:rounded-[50px] md:rounded-t-[60px] px-5 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-20 flex flex-col justify-center items-center"
+      className="bg-white text-[#0C0C0C] rounded-t-[40px] sm:rounded-[50px] md:rounded-t-[60px] px-4 sm:px-8 md:px-10 py-20 sm:py-24 md:py-32 relative z-20 flex flex-col justify-center items-center"
     >
-      <div className="max-w-5xl w-full">
+      <div className="max-w-5xl w-full px-2 sm:px-0">
         {/* Heading */}
         <div className="text-center justify-center mb-16 sm:mb-20 md:mb-28">
           <FadeIn as="h2" y={40}>
@@ -27,18 +27,18 @@ export default function EducationSection() {
               key={item.id}
               delay={i * 0.1}
               y={35}
-              className="border-b border-[#0C0C0C]/15 py-8 sm:py-10 md:py-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-10"
+              className="border-b border-[#0C0C0C]/15 px-4 sm:px-0 py-8 sm:py-10 md:py-12 flex flex-col items-center text-center md:flex-row md:items-center md:text-left md:justify-between gap-6 md:gap-10"
             >
               {/* Left Column: Year */}
               <div
                 style={{ fontSize: "clamp(2rem, 5vw, 4rem)" }}
-                className="font-black text-[#0C0C0C] leading-none select-none md:w-[180px] lg:w-[220px] flex-shrink-0"
+                className="font-black text-[#0C0C0C] leading-none select-none md:w-[180px] lg:w-[220px] flex-shrink-0 pl-0 sm:pl-0 md:pl-0"
               >
                 {item.year}
               </div>
 
               {/* Right Column: School & Degree Stack */}
-              <div className="flex-1 flex flex-col gap-2 md:gap-3">
+              <div className="flex-1 flex flex-col gap-2 md:gap-3 pl-0 md:pl-0">
                 <h3
                   style={{ fontSize: "clamp(1.2rem, 2.2vw, 2.1rem)" }}
                   className="font-medium uppercase text-[#0C0C0C] tracking-tight"
