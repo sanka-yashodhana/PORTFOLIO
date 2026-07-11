@@ -6,7 +6,7 @@ export interface Project {
   col1_1: string;
   col1_2: string;
   col2: string;
-  liveUrl: string;
+  liveUrl?: string;
   liveUr2?: string;
   liveUr3?: string;
   detailedDescription?: string;

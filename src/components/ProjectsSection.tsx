@@ -118,11 +118,13 @@ function ProjectCard({ project, index, total }: ProjectCardProps) {
             <AboutProjectButton
               onClick={() => setIsDescriptionVisible(!isDescriptionVisible)}
             />
-            <LiveProjectButton
-              onClick={() =>
-                window.open(project.liveUrl, "_blank", "noopener,noreferrer")
-              }
-            />
+            {project.liveUrl && (
+              <LiveProjectButton
+                onClick={() =>
+                  window.open(project.liveUrl, "_blank", "noopener,noreferrer")
+                }
+              />
+            )}
             {project.liveUr2 && (
               <LiveProjectButton
                 onClick={() =>

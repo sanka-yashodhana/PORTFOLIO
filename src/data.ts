@@ -155,7 +155,6 @@ export const PROJECTS: Project[] = [
       "https://i.postimg.cc/3xmRpZ21/Screenshot-2026-07-10-012525.png",
     col1_2:"https://i.postimg.cc/zvvvgZk3/Screenshot-2026-07-10-012500.png",
     col2: "https://i.postimg.cc/LXHnmZYL/Screenshot-2026-07-10-012354.png",
-    liveUrl: "",
   },
 ];
 
