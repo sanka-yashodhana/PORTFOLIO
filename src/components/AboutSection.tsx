@@ -8,7 +8,7 @@ interface AboutSectionProps {
 
 export default function AboutSection({ onContactClick }: AboutSectionProps) {
   const aboutText =
-    "I approach software development with a deep commitment to structural integrity and user experience. For me, writing code is about balancing clean architecture with seamless functionality, ensuring that what happens under the hood is just as refined as the interface the user interacts with.";
+    "Hello, I'm Sanka Yashodhana. As a BICT (Hons) in Information and Communication Technology undergraduate, I approach software development with a deep commitment to structural integrity and user experience. For me, writing code is about balancing clean architecture with seamless functionality—ensuring that what happens under the hood is just as refined as the interface the user interacts with.";
 
   return (
     <section
