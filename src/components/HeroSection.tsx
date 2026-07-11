@@ -51,7 +51,7 @@ export default function HeroSection({ onContactClick }: HeroSectionProps) {
               className="w-full flex justify-center"
             >
               <img
-                src="https://i.postimg.cc/Y2mMKXkh/Gemini-Generated-Image-yslri7yslri7yslr1-bg-removed.png"
+                src="https://i.postimg.cc/QNbWcpKD/Gemini-Generated-Image-yslri7yslri7yslr1-edit.webp"
                 alt="Sanka Portrait"
                 className="w-full h-auto object-contain select-none pointer-events-none"
                 referrerPolicy="no-referrer"
