@@ -59,7 +59,7 @@ export default function App() {
       <div className="h-20 sm:h-40 md:z-30"/>
 
       {/* Footer */}
-      <Footer />
+      <Footer onContactClick={openContact} />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import FadeIn from "./FadeIn";
+import ContactButton from "./ContactButton";
 
 const iconContainerVariants = {
   hidden: { opacity: 0 },
@@ -22,6 +23,10 @@ const iconVariants = {
   hidden: { y: 20, opacity: 0 },
   visible: { y: 0, opacity: 1 },
 };
+
+interface FooterProps {
+  onContactClick?: () => void;
+}
 
 const socialLinks = [
   {
@@ -49,7 +54,7 @@ const socialLinks = [
   { label: "Phone", icon: Phone, href: "tel:+94729902577" },
 ];
 
-export default function Footer() {
+export default function Footer({ onContactClick }: FooterProps) {
   return (
     <footer className="bg-[#0C0C0C] text-[#D7E2EA] px-5 sm:px-8 md:px-10 pt-12 pb-16 relative z-30 border-t-2 border-white/10 flex flex-col items-center justify-center">
       <FadeIn>
@@ -63,6 +68,14 @@ export default function Footer() {
            
           </div>
           
+          {onContactClick && (
+            <ContactButton
+              onClick={onContactClick}
+              label="Contact Me"
+              className="px-7 py-2.5 sm:px-8 sm:py-3"
+            />
+          )}
+
           <motion.div
             className="flex items-center gap-4"
             variants={iconContainerVariants}
