@@ -24,7 +24,7 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     if (!name || !email || !message) {
       alert("Please fill in all fields.");
@@ -37,24 +37,36 @@ export default function ContactDialog({ isOpen, onClose }: ContactDialogProps) {
     const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
     const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
+    if (!serviceId || !templateId || !publicKey) {
+      alert("The contact form is not configured yet. Please set the EmailJS environment variables.");
+      setIsSubmitting(false);
+      return;
+    }
+
     const templateParams = {
       name: name,
       email: email,
       message: message,
     };
 
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        setIsSubmitted(true);
-      })
-      .catch((err) => {
-        console.error("FAILED...", err);
+    try {
+      const response = await emailjs.send(serviceId, templateId, templateParams, publicKey);
+      console.log("SUCCESS!", response.status, response.text);
+      setIsSubmitted(true);
+    } catch (err) {
+      const errorDetails = err as { status?: number; text?: string };
+      console.error("FAILED...", err);
+
+      if (errorDetails?.status === 412) {
+        alert(
+          "Email delivery is currently blocked by the EmailJS Google authorization. Please reconnect the EmailJS service in the dashboard or try again later."
+        );
+      } else {
         alert("Failed to send message. Please try again later.");
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const resetForm = () => {
