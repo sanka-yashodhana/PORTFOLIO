@@ -62,6 +62,7 @@ export default function Footer() {
             <p className="text-sm text-[#D7E2EA]/60 mt-6 text-center" >I approach software development with a deep commitment to structural integrity and user experience. For me, writing code is about balancing clean architecture with seamless functionality, ensuring that what happens under the hood is just as refined as the interface the user interacts with.</p>
            
           </div>
+          
           <motion.div
             className="flex items-center gap-4"
             variants={iconContainerVariants}

@@ -27,12 +27,13 @@ export default function PatternSection() {
             {PROJECT_PATTERN_CARDS.map((card) => (
               <div
                 key={card.id}
-                className="rounded-[24px] border border-[#D7E2EA]/10 bg-[#0C0C0C]/70 p-5 backdrop-blur-sm"
+                className="rounded-[24px] border border-[#D7E2EA]/10 bg-white p-5 backdrop-blur-sm"
               >
-                <h4 className="text-lg font-semibold uppercase tracking-wide text-[#D7E2EA]">
+                <h4 className="text-lg font-semibold uppercase tracking-wide text-black">
                   {card.title}
                 </h4>
-                <p className="mt-2 text-sm leading-relaxed text-[#D7E2EA]/70">
+                <hr className="text-gray-300"></hr>
+                <p className="mt-2 text-sm leading-relaxed text-black">
                   {card.description}
                 </p>
               </div>
